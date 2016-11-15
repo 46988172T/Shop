@@ -15,34 +15,34 @@ public class Product {
     private Integer id;
     @SerializedName("id_manufacturer")
     @Expose
-    private String id_manufacturer;
+    private String idManufacturer;
     @SerializedName("id_supplier")
     @Expose
-    private String id_supplier;
+    private String idSupplier;
     @SerializedName("id_category_default")
     @Expose
-    private String id_category_default;
+    private String idCategoryDefault;
     @SerializedName("new")
     @Expose
     private Object _new;
     @SerializedName("cache_default_attribute")
     @Expose
-    private String cache_default_attribute;
+    private String cacheDefaultAttribute;
     @SerializedName("id_default_image")
     @Expose
-    private String id_default_image;
+    private String idDefaultImage;
     @SerializedName("id_default_combination")
     @Expose
-    private Integer id_default_combination;
+    private Integer idDefaultCombination;
     @SerializedName("id_tax_rules_group")
     @Expose
-    private String id_tax_rules_group;
+    private String idTaxRulesGroup;
     @SerializedName("position_in_category")
     @Expose
-    private String position_in_category;
+    private String positionInCategory;
     @SerializedName("manufacturer_name")
     @Expose
-    private Boolean manufacturer_name;
+    private Boolean manufacturerName;
     @SerializedName("quantity")
     @Expose
     private String quantity;
@@ -51,13 +51,13 @@ public class Product {
     private String type;
     @SerializedName("id_shop_default")
     @Expose
-    private String id_shop_default;
+    private String idShopDefault;
     @SerializedName("reference")
     @Expose
     private String reference;
     @SerializedName("supplier_reference")
     @Expose
-    private String supplier_reference;
+    private String supplierReference;
     @SerializedName("location")
     @Expose
     private String location;
@@ -75,7 +75,7 @@ public class Product {
     private String weight;
     @SerializedName("quantity_discount")
     @Expose
-    private String quantity_discount;
+    private String quantityDiscount;
     @SerializedName("ean13")
     @Expose
     private String ean13;
@@ -84,70 +84,70 @@ public class Product {
     private String upc;
     @SerializedName("cache_is_pack")
     @Expose
-    private String cache_is_pack;
+    private String cacheIsPack;
     @SerializedName("cache_has_attachments")
     @Expose
-    private String cache_has_attachments;
+    private String cacheHasAttachments;
     @SerializedName("is_virtual")
     @Expose
-    private String is_virtual;
+    private String isVirtual;
     @SerializedName("on_sale")
     @Expose
-    private String on_sale;
+    private String onSale;
     @SerializedName("online_only")
     @Expose
-    private String online_only;
+    private String onlineOnly;
     @SerializedName("ecotax")
     @Expose
     private String ecotax;
     @SerializedName("minimal_quantity")
     @Expose
-    private String minimal_quantity;
+    private String minimalQuantity;
     @SerializedName("price")
     @Expose
     private String price;
     @SerializedName("wholesale_price")
     @Expose
-    private String wholesale_price;
+    private String wholesalePrice;
     @SerializedName("unity")
     @Expose
     private String unity;
     @SerializedName("unit_price_ratio")
     @Expose
-    private String unit_price_ratio;
+    private String unitPriceRatio;
     @SerializedName("additional_shipping_cost")
     @Expose
-    private String additional_shipping_cost;
+    private String additionalShippingCost;
     @SerializedName("customizable")
     @Expose
     private String customizable;
     @SerializedName("text_fields")
     @Expose
-    private String text_fields;
+    private String textFields;
     @SerializedName("uploadable_files")
     @Expose
-    private String uploadable_files;
+    private String uploadableFiles;
     @SerializedName("active")
     @Expose
     private String active;
     @SerializedName("redirect_type")
     @Expose
-    private String redirect_type;
+    private String redirectType;
     @SerializedName("id_product_redirected")
     @Expose
-    private String id_product_redirected;
+    private String idProductRedirected;
     @SerializedName("available_for_order")
     @Expose
-    private String available_for_order;
+    private String availableForOrder;
     @SerializedName("available_date")
     @Expose
-    private String available_date;
+    private String availableDate;
     @SerializedName("condition")
     @Expose
     private String condition;
     @SerializedName("show_price")
     @Expose
-    private String show_price;
+    private String showPrice;
     @SerializedName("indexed")
     @Expose
     private String indexed;
@@ -156,34 +156,46 @@ public class Product {
     private String visibility;
     @SerializedName("advanced_stock_management")
     @Expose
-    private String advanced_stock_management;
+    private String advancedStockManagement;
     @SerializedName("date_add")
     @Expose
-    private String date_add;
+    private String dateAdd;
     @SerializedName("date_upd")
     @Expose
-    private String date_upd;
+    private String dateUpd;
     @SerializedName("pack_stock_type")
     @Expose
-    private String pack_stock_type;
-    @SerializedName("nameProduct")
+    private String packStockType;
+    @SerializedName("meta_description")
     @Expose
-    private List<NameProduct> nameProduct = new ArrayList<NameProduct>();
-    @SerializedName("descriptionProduct")
+    private List<MetaDescription> metaDescription = new ArrayList<MetaDescription>();
+    @SerializedName("meta_keywords")
     @Expose
-    private List<DescriptionProduct> descriptionProduct = new ArrayList<DescriptionProduct>();
+    private List<MetaKeyword> metaKeywords = new ArrayList<MetaKeyword>();
+    @SerializedName("meta_title")
+    @Expose
+    private List<MetaTitle> metaTitle = new ArrayList<MetaTitle>();
+    @SerializedName("link_rewrite")
+    @Expose
+    private List<LinkRewrite> linkRewrite = new ArrayList<LinkRewrite>();
+    @SerializedName("name")
+    @Expose
+    private List<Name> name = new ArrayList<Name>();
+    @SerializedName("description")
+    @Expose
+    private List<Description> description = new ArrayList<Description>();
     @SerializedName("description_short")
     @Expose
-    private List<DescriptionShortProduct> description_short = new ArrayList<DescriptionShortProduct>();
+    private List<DescriptionShort> descriptionShort = new ArrayList<DescriptionShort>();
     @SerializedName("available_now")
     @Expose
-    private List<Available_now> available_now = new ArrayList<Available_now>();
+    private List<AvailableNow> availableNow = new ArrayList<AvailableNow>();
     @SerializedName("available_later")
     @Expose
-    private List<Available_later> available_later = new ArrayList<Available_later>();
-    @SerializedName("associationsProduct")
+    private List<AvailableLater> availableLater = new ArrayList<AvailableLater>();
+    @SerializedName("associations")
     @Expose
-    private AssociationsProduct associationsProduct;
+    private Associations associations;
 
     /**
      * No args constructor for use in serialization
@@ -194,128 +206,132 @@ public class Product {
 
     /**
      * 
+     * @param availableNow
      * @param customizable
-     * @param id_default_combination
-     * @param date_upd
-     * @param id_supplier
-     * @param available_date
-     * @param meta_keywords
+     * @param packStockType
+     * @param uploadableFiles
+     * @param textFields
      * @param location
-     * @param additional_shipping_cost
+     * @param idSupplier
      * @param visibility
      * @param type
-     * @param available_now
-     * @param id_shop_default
-     * @param redirect_type
+     * @param positionInCategory
+     * @param availableForOrder
+     * @param cacheIsPack
      * @param ecotax
      * @param height
-     * @param descriptionProduct
-     * @param id_manufacturer
+     * @param description
      * @param quantity
-     * @param show_price
-     * @param available_later
-     * @param cache_default_attribute
+     * @param minimalQuantity
+     * @param idProductRedirected
+     * @param idShopDefault
+     * @param wholesalePrice
      * @param condition
      * @param width
-     * @param advanced_stock_management
-     * @param manufacturer_name
+     * @param showPrice
+     * @param cacheDefaultAttribute
      * @param depth
-     * @param quantity_discount
-     * @param is_virtual
-     * @param id_tax_rules_group
+     * @param dateAdd
+     * @param idDefaultCombination
      * @param price
-     * @param id_default_image
-     * @param associationsProduct
+     * @param associations
      * @param _new
      * @param active
-     * @param online_only
-     * @param uploadable_files
-     * @param id_category_default
+     * @param idTaxRulesGroup
      * @param weight
+     * @param idCategoryDefault
      * @param indexed
-     * @param date_add
+     * @param metaKeywords
+     * @param onlineOnly
+     * @param metaTitle
+     * @param additionalShippingCost
      * @param id
-     * @param available_for_order
-     * @param description_short
-     * @param pack_stock_type
-     * @param nameProduct
-     * @param minimal_quantity
-     * @param position_in_category
-     * @param link_rewrite
-     * @param cache_is_pack
-     * @param text_fields
-     * @param supplier_reference
-     * @param on_sale
+     * @param availableDate
+     * @param advancedStockManagement
+     * @param cacheHasAttachments
+     * @param dateUpd
+     * @param name
+     * @param idDefaultImage
+     * @param descriptionShort
+     * @param supplierReference
+     * @param onSale
+     * @param metaDescription
+     * @param redirectType
+     * @param isVirtual
      * @param upc
+     * @param quantityDiscount
      * @param reference
-     * @param cache_has_attachments
-     * @param meta_description
-     * @param wholesale_price
+     * @param unitPriceRatio
      * @param unity
-     * @param meta_title
-     * @param unit_price_ratio
+     * @param availableLater
+     * @param manufacturerName
+     * @param linkRewrite
      * @param ean13
-     * @param id_product_redirected
+     * @param idManufacturer
      */
-    public Product(Integer id, String id_manufacturer, String id_supplier, String id_category_default, Object _new, String cache_default_attribute, String id_default_image, Integer id_default_combination, String id_tax_rules_group, String position_in_category, Boolean manufacturer_name, String quantity, String type, String id_shop_default, String reference, String supplier_reference, String location, String width, String height, String depth, String weight, String quantity_discount, String ean13, String upc, String cache_is_pack, String cache_has_attachments, String is_virtual, String on_sale, String online_only, String ecotax, String minimal_quantity, String price, String wholesale_price, String unity, String unit_price_ratio, String additional_shipping_cost, String customizable, String text_fields, String uploadable_files, String active, String redirect_type, String id_product_redirected, String available_for_order, String available_date, String condition, String show_price, String indexed, String visibility, String advanced_stock_management, String date_add, String date_upd, String pack_stock_type, List<NameProduct> nameProduct, List<DescriptionProduct> descriptionProduct, List<DescriptionShortProduct> description_short, List<Available_now> available_now, List<Available_later> available_later, AssociationsProduct associationsProduct) {
+    public Product(Integer id, String idManufacturer, String idSupplier, String idCategoryDefault, Object _new, String cacheDefaultAttribute, String idDefaultImage, Integer idDefaultCombination, String idTaxRulesGroup, String positionInCategory, Boolean manufacturerName, String quantity, String type, String idShopDefault, String reference, String supplierReference, String location, String width, String height, String depth, String weight, String quantityDiscount, String ean13, String upc, String cacheIsPack, String cacheHasAttachments, String isVirtual, String onSale, String onlineOnly, String ecotax, String minimalQuantity, String price, String wholesalePrice, String unity, String unitPriceRatio, String additionalShippingCost, String customizable, String textFields, String uploadableFiles, String active, String redirectType, String idProductRedirected, String availableForOrder, String availableDate, String condition, String showPrice, String indexed, String visibility, String advancedStockManagement, String dateAdd, String dateUpd, String packStockType, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, List<MetaTitle> metaTitle, List<LinkRewrite> linkRewrite, List<Name> name, List<Description> description, List<DescriptionShort> descriptionShort, List<AvailableNow> availableNow, List<AvailableLater> availableLater, Associations associations) {
         this.id = id;
-        this.id_manufacturer = id_manufacturer;
-        this.id_supplier = id_supplier;
-        this.id_category_default = id_category_default;
+        this.idManufacturer = idManufacturer;
+        this.idSupplier = idSupplier;
+        this.idCategoryDefault = idCategoryDefault;
         this._new = _new;
-        this.cache_default_attribute = cache_default_attribute;
-        this.id_default_image = id_default_image;
-        this.id_default_combination = id_default_combination;
-        this.id_tax_rules_group = id_tax_rules_group;
-        this.position_in_category = position_in_category;
-        this.manufacturer_name = manufacturer_name;
+        this.cacheDefaultAttribute = cacheDefaultAttribute;
+        this.idDefaultImage = idDefaultImage;
+        this.idDefaultCombination = idDefaultCombination;
+        this.idTaxRulesGroup = idTaxRulesGroup;
+        this.positionInCategory = positionInCategory;
+        this.manufacturerName = manufacturerName;
         this.quantity = quantity;
         this.type = type;
-        this.id_shop_default = id_shop_default;
+        this.idShopDefault = idShopDefault;
         this.reference = reference;
-        this.supplier_reference = supplier_reference;
+        this.supplierReference = supplierReference;
         this.location = location;
         this.width = width;
         this.height = height;
         this.depth = depth;
         this.weight = weight;
-        this.quantity_discount = quantity_discount;
+        this.quantityDiscount = quantityDiscount;
         this.ean13 = ean13;
         this.upc = upc;
-        this.cache_is_pack = cache_is_pack;
-        this.cache_has_attachments = cache_has_attachments;
-        this.is_virtual = is_virtual;
-        this.on_sale = on_sale;
-        this.online_only = online_only;
+        this.cacheIsPack = cacheIsPack;
+        this.cacheHasAttachments = cacheHasAttachments;
+        this.isVirtual = isVirtual;
+        this.onSale = onSale;
+        this.onlineOnly = onlineOnly;
         this.ecotax = ecotax;
-        this.minimal_quantity = minimal_quantity;
+        this.minimalQuantity = minimalQuantity;
         this.price = price;
-        this.wholesale_price = wholesale_price;
+        this.wholesalePrice = wholesalePrice;
         this.unity = unity;
-        this.unit_price_ratio = unit_price_ratio;
-        this.additional_shipping_cost = additional_shipping_cost;
+        this.unitPriceRatio = unitPriceRatio;
+        this.additionalShippingCost = additionalShippingCost;
         this.customizable = customizable;
-        this.text_fields = text_fields;
-        this.uploadable_files = uploadable_files;
+        this.textFields = textFields;
+        this.uploadableFiles = uploadableFiles;
         this.active = active;
-        this.redirect_type = redirect_type;
-        this.id_product_redirected = id_product_redirected;
-        this.available_for_order = available_for_order;
-        this.available_date = available_date;
+        this.redirectType = redirectType;
+        this.idProductRedirected = idProductRedirected;
+        this.availableForOrder = availableForOrder;
+        this.availableDate = availableDate;
         this.condition = condition;
-        this.show_price = show_price;
+        this.showPrice = showPrice;
         this.indexed = indexed;
         this.visibility = visibility;
-        this.advanced_stock_management = advanced_stock_management;
-        this.date_add = date_add;
-        this.date_upd = date_upd;
-        this.pack_stock_type = pack_stock_type;
-        this.nameProduct = nameProduct;
-        this.descriptionProduct = descriptionProduct;
-        this.description_short = description_short;
-        this.available_now = available_now;
-        this.available_later = available_later;
-        this.associationsProduct = associationsProduct;
+        this.advancedStockManagement = advancedStockManagement;
+        this.dateAdd = dateAdd;
+        this.dateUpd = dateUpd;
+        this.packStockType = packStockType;
+        this.metaDescription = metaDescription;
+        this.metaKeywords = metaKeywords;
+        this.metaTitle = metaTitle;
+        this.linkRewrite = linkRewrite;
+        this.name = name;
+        this.description = description;
+        this.descriptionShort = descriptionShort;
+        this.availableNow = availableNow;
+        this.availableLater = availableLater;
+        this.associations = associations;
     }
 
     /**
@@ -339,55 +355,55 @@ public class Product {
     /**
      * 
      * @return
-     *     The id_manufacturer
+     *     The idManufacturer
      */
-    public String getId_manufacturer() {
-        return id_manufacturer;
+    public String getIdManufacturer() {
+        return idManufacturer;
     }
 
     /**
      * 
-     * @param id_manufacturer
+     * @param idManufacturer
      *     The id_manufacturer
      */
-    public void setId_manufacturer(String id_manufacturer) {
-        this.id_manufacturer = id_manufacturer;
+    public void setIdManufacturer(String idManufacturer) {
+        this.idManufacturer = idManufacturer;
     }
 
     /**
      * 
      * @return
-     *     The id_supplier
+     *     The idSupplier
      */
-    public String getId_supplier() {
-        return id_supplier;
+    public String getIdSupplier() {
+        return idSupplier;
     }
 
     /**
      * 
-     * @param id_supplier
+     * @param idSupplier
      *     The id_supplier
      */
-    public void setId_supplier(String id_supplier) {
-        this.id_supplier = id_supplier;
+    public void setIdSupplier(String idSupplier) {
+        this.idSupplier = idSupplier;
     }
 
     /**
      * 
      * @return
-     *     The id_category_default
+     *     The idCategoryDefault
      */
-    public String getId_category_default() {
-        return id_category_default;
+    public String getIdCategoryDefault() {
+        return idCategoryDefault;
     }
 
     /**
      * 
-     * @param id_category_default
+     * @param idCategoryDefault
      *     The id_category_default
      */
-    public void setId_category_default(String id_category_default) {
-        this.id_category_default = id_category_default;
+    public void setIdCategoryDefault(String idCategoryDefault) {
+        this.idCategoryDefault = idCategoryDefault;
     }
 
     /**
@@ -411,109 +427,109 @@ public class Product {
     /**
      * 
      * @return
+     *     The cacheDefaultAttribute
+     */
+    public String getCacheDefaultAttribute() {
+        return cacheDefaultAttribute;
+    }
+
+    /**
+     * 
+     * @param cacheDefaultAttribute
      *     The cache_default_attribute
      */
-    public String getCache_default_attribute() {
-        return cache_default_attribute;
-    }
-
-    /**
-     * 
-     * @param cache_default_attribute
-     *     The cache_default_attribute
-     */
-    public void setCache_default_attribute(String cache_default_attribute) {
-        this.cache_default_attribute = cache_default_attribute;
+    public void setCacheDefaultAttribute(String cacheDefaultAttribute) {
+        this.cacheDefaultAttribute = cacheDefaultAttribute;
     }
 
     /**
      * 
      * @return
+     *     The idDefaultImage
+     */
+    public String getIdDefaultImage() {
+        return idDefaultImage;
+    }
+
+    /**
+     * 
+     * @param idDefaultImage
      *     The id_default_image
      */
-    public String getId_default_image() {
-        return id_default_image;
-    }
-
-    /**
-     * 
-     * @param id_default_image
-     *     The id_default_image
-     */
-    public void setId_default_image(String id_default_image) {
-        this.id_default_image = id_default_image;
+    public void setIdDefaultImage(String idDefaultImage) {
+        this.idDefaultImage = idDefaultImage;
     }
 
     /**
      * 
      * @return
+     *     The idDefaultCombination
+     */
+    public Integer getIdDefaultCombination() {
+        return idDefaultCombination;
+    }
+
+    /**
+     * 
+     * @param idDefaultCombination
      *     The id_default_combination
      */
-    public Integer getId_default_combination() {
-        return id_default_combination;
-    }
-
-    /**
-     * 
-     * @param id_default_combination
-     *     The id_default_combination
-     */
-    public void setId_default_combination(Integer id_default_combination) {
-        this.id_default_combination = id_default_combination;
+    public void setIdDefaultCombination(Integer idDefaultCombination) {
+        this.idDefaultCombination = idDefaultCombination;
     }
 
     /**
      * 
      * @return
+     *     The idTaxRulesGroup
+     */
+    public String getIdTaxRulesGroup() {
+        return idTaxRulesGroup;
+    }
+
+    /**
+     * 
+     * @param idTaxRulesGroup
      *     The id_tax_rules_group
      */
-    public String getId_tax_rules_group() {
-        return id_tax_rules_group;
-    }
-
-    /**
-     * 
-     * @param id_tax_rules_group
-     *     The id_tax_rules_group
-     */
-    public void setId_tax_rules_group(String id_tax_rules_group) {
-        this.id_tax_rules_group = id_tax_rules_group;
+    public void setIdTaxRulesGroup(String idTaxRulesGroup) {
+        this.idTaxRulesGroup = idTaxRulesGroup;
     }
 
     /**
      * 
      * @return
-     *     The position_in_category
+     *     The positionInCategory
      */
-    public String getPosition_in_category() {
-        return position_in_category;
+    public String getPositionInCategory() {
+        return positionInCategory;
     }
 
     /**
      * 
-     * @param position_in_category
+     * @param positionInCategory
      *     The position_in_category
      */
-    public void setPosition_in_category(String position_in_category) {
-        this.position_in_category = position_in_category;
+    public void setPositionInCategory(String positionInCategory) {
+        this.positionInCategory = positionInCategory;
     }
 
     /**
      * 
      * @return
-     *     The manufacturer_name
+     *     The manufacturerName
      */
-    public Boolean getManufacturer_name() {
-        return manufacturer_name;
+    public Boolean getManufacturerName() {
+        return manufacturerName;
     }
 
     /**
      * 
-     * @param manufacturer_name
+     * @param manufacturerName
      *     The manufacturer_name
      */
-    public void setManufacturer_name(Boolean manufacturer_name) {
-        this.manufacturer_name = manufacturer_name;
+    public void setManufacturerName(Boolean manufacturerName) {
+        this.manufacturerName = manufacturerName;
     }
 
     /**
@@ -555,19 +571,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The id_shop_default
+     *     The idShopDefault
      */
-    public String getId_shop_default() {
-        return id_shop_default;
+    public String getIdShopDefault() {
+        return idShopDefault;
     }
 
     /**
      * 
-     * @param id_shop_default
+     * @param idShopDefault
      *     The id_shop_default
      */
-    public void setId_shop_default(String id_shop_default) {
-        this.id_shop_default = id_shop_default;
+    public void setIdShopDefault(String idShopDefault) {
+        this.idShopDefault = idShopDefault;
     }
 
     /**
@@ -591,19 +607,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The supplier_reference
+     *     The supplierReference
      */
-    public String getSupplier_reference() {
-        return supplier_reference;
+    public String getSupplierReference() {
+        return supplierReference;
     }
 
     /**
      * 
-     * @param supplier_reference
+     * @param supplierReference
      *     The supplier_reference
      */
-    public void setSupplier_reference(String supplier_reference) {
-        this.supplier_reference = supplier_reference;
+    public void setSupplierReference(String supplierReference) {
+        this.supplierReference = supplierReference;
     }
 
     /**
@@ -699,19 +715,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The quantity_discount
+     *     The quantityDiscount
      */
-    public String getQuantity_discount() {
-        return quantity_discount;
+    public String getQuantityDiscount() {
+        return quantityDiscount;
     }
 
     /**
      * 
-     * @param quantity_discount
+     * @param quantityDiscount
      *     The quantity_discount
      */
-    public void setQuantity_discount(String quantity_discount) {
-        this.quantity_discount = quantity_discount;
+    public void setQuantityDiscount(String quantityDiscount) {
+        this.quantityDiscount = quantityDiscount;
     }
 
     /**
@@ -753,91 +769,91 @@ public class Product {
     /**
      * 
      * @return
+     *     The cacheIsPack
+     */
+    public String getCacheIsPack() {
+        return cacheIsPack;
+    }
+
+    /**
+     * 
+     * @param cacheIsPack
      *     The cache_is_pack
      */
-    public String getCache_is_pack() {
-        return cache_is_pack;
-    }
-
-    /**
-     * 
-     * @param cache_is_pack
-     *     The cache_is_pack
-     */
-    public void setCache_is_pack(String cache_is_pack) {
-        this.cache_is_pack = cache_is_pack;
+    public void setCacheIsPack(String cacheIsPack) {
+        this.cacheIsPack = cacheIsPack;
     }
 
     /**
      * 
      * @return
+     *     The cacheHasAttachments
+     */
+    public String getCacheHasAttachments() {
+        return cacheHasAttachments;
+    }
+
+    /**
+     * 
+     * @param cacheHasAttachments
      *     The cache_has_attachments
      */
-    public String getCache_has_attachments() {
-        return cache_has_attachments;
-    }
-
-    /**
-     * 
-     * @param cache_has_attachments
-     *     The cache_has_attachments
-     */
-    public void setCache_has_attachments(String cache_has_attachments) {
-        this.cache_has_attachments = cache_has_attachments;
+    public void setCacheHasAttachments(String cacheHasAttachments) {
+        this.cacheHasAttachments = cacheHasAttachments;
     }
 
     /**
      * 
      * @return
+     *     The isVirtual
+     */
+    public String getIsVirtual() {
+        return isVirtual;
+    }
+
+    /**
+     * 
+     * @param isVirtual
      *     The is_virtual
      */
-    public String getIs_virtual() {
-        return is_virtual;
-    }
-
-    /**
-     * 
-     * @param is_virtual
-     *     The is_virtual
-     */
-    public void setIs_virtual(String is_virtual) {
-        this.is_virtual = is_virtual;
+    public void setIsVirtual(String isVirtual) {
+        this.isVirtual = isVirtual;
     }
 
     /**
      * 
      * @return
-     *     The on_sale
+     *     The onSale
      */
-    public String getOn_sale() {
-        return on_sale;
+    public String getOnSale() {
+        return onSale;
     }
 
     /**
      * 
-     * @param on_sale
+     * @param onSale
      *     The on_sale
      */
-    public void setOn_sale(String on_sale) {
-        this.on_sale = on_sale;
+    public void setOnSale(String onSale) {
+        this.onSale = onSale;
     }
 
     /**
      * 
      * @return
-     *     The online_only
+     *     The onlineOnly
      */
-    public String getOnline_only() {
-        return online_only;
+    public String getOnlineOnly() {
+        return onlineOnly;
     }
 
     /**
      * 
-     * @param online_only
+     * @param onlineOnly
      *     The online_only
      */
-    public void setOnline_only(String online_only) {
-        this.online_only = online_only;
+    public void setOnlineOnly(String onlineOnly) {
+        this.onlineOnly = onlineOnly;
     }
 
     /**
@@ -861,19 +877,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The minimal_quantity
+     *     The minimalQuantity
      */
-    public String getMinimal_quantity() {
-        return minimal_quantity;
+    public String getMinimalQuantity() {
+        return minimalQuantity;
     }
 
     /**
      * 
-     * @param minimal_quantity
+     * @param minimalQuantity
      *     The minimal_quantity
      */
-    public void setMinimal_quantity(String minimal_quantity) {
-        this.minimal_quantity = minimal_quantity;
+    public void setMinimalQuantity(String minimalQuantity) {
+        this.minimalQuantity = minimalQuantity;
     }
 
     /**
@@ -897,19 +913,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The wholesale_price
+     *     The wholesalePrice
      */
-    public String getWholesale_price() {
-        return wholesale_price;
+    public String getWholesalePrice() {
+        return wholesalePrice;
     }
 
     /**
      * 
-     * @param wholesale_price
+     * @param wholesalePrice
      *     The wholesale_price
      */
-    public void setWholesale_price(String wholesale_price) {
-        this.wholesale_price = wholesale_price;
+    public void setWholesalePrice(String wholesalePrice) {
+        this.wholesalePrice = wholesalePrice;
     }
 
     /**
@@ -933,37 +949,37 @@ public class Product {
     /**
      * 
      * @return
-     *     The unit_price_ratio
+     *     The unitPriceRatio
      */
-    public String getUnit_price_ratio() {
-        return unit_price_ratio;
+    public String getUnitPriceRatio() {
+        return unitPriceRatio;
     }
 
     /**
      * 
-     * @param unit_price_ratio
+     * @param unitPriceRatio
      *     The unit_price_ratio
      */
-    public void setUnit_price_ratio(String unit_price_ratio) {
-        this.unit_price_ratio = unit_price_ratio;
+    public void setUnitPriceRatio(String unitPriceRatio) {
+        this.unitPriceRatio = unitPriceRatio;
     }
 
     /**
      * 
      * @return
-     *     The additional_shipping_cost
+     *     The additionalShippingCost
      */
-    public String getAdditional_shipping_cost() {
-        return additional_shipping_cost;
+    public String getAdditionalShippingCost() {
+        return additionalShippingCost;
     }
 
     /**
      * 
-     * @param additional_shipping_cost
+     * @param additionalShippingCost
      *     The additional_shipping_cost
      */
-    public void setAdditional_shipping_cost(String additional_shipping_cost) {
-        this.additional_shipping_cost = additional_shipping_cost;
+    public void setAdditionalShippingCost(String additionalShippingCost) {
+        this.additionalShippingCost = additionalShippingCost;
     }
 
     /**
@@ -987,37 +1003,37 @@ public class Product {
     /**
      * 
      * @return
-     *     The text_fields
+     *     The textFields
      */
-    public String getText_fields() {
-        return text_fields;
+    public String getTextFields() {
+        return textFields;
     }
 
     /**
      * 
-     * @param text_fields
+     * @param textFields
      *     The text_fields
      */
-    public void setText_fields(String text_fields) {
-        this.text_fields = text_fields;
+    public void setTextFields(String textFields) {
+        this.textFields = textFields;
     }
 
     /**
      * 
      * @return
-     *     The uploadable_files
+     *     The uploadableFiles
      */
-    public String getUploadable_files() {
-        return uploadable_files;
+    public String getUploadableFiles() {
+        return uploadableFiles;
     }
 
     /**
      * 
-     * @param uploadable_files
+     * @param uploadableFiles
      *     The uploadable_files
      */
-    public void setUploadable_files(String uploadable_files) {
-        this.uploadable_files = uploadable_files;
+    public void setUploadableFiles(String uploadableFiles) {
+        this.uploadableFiles = uploadableFiles;
     }
 
     /**
@@ -1041,73 +1057,73 @@ public class Product {
     /**
      * 
      * @return
+     *     The redirectType
+     */
+    public String getRedirectType() {
+        return redirectType;
+    }
+
+    /**
+     * 
+     * @param redirectType
      *     The redirect_type
      */
-    public String getRedirect_type() {
-        return redirect_type;
-    }
-
-    /**
-     * 
-     * @param redirect_type
-     *     The redirect_type
-     */
-    public void setRedirect_type(String redirect_type) {
-        this.redirect_type = redirect_type;
+    public void setRedirectType(String redirectType) {
+        this.redirectType = redirectType;
     }
 
     /**
      * 
      * @return
+     *     The idProductRedirected
+     */
+    public String getIdProductRedirected() {
+        return idProductRedirected;
+    }
+
+    /**
+     * 
+     * @param idProductRedirected
      *     The id_product_redirected
      */
-    public String getId_product_redirected() {
-        return id_product_redirected;
-    }
-
-    /**
-     * 
-     * @param id_product_redirected
-     *     The id_product_redirected
-     */
-    public void setId_product_redirected(String id_product_redirected) {
-        this.id_product_redirected = id_product_redirected;
+    public void setIdProductRedirected(String idProductRedirected) {
+        this.idProductRedirected = idProductRedirected;
     }
 
     /**
      * 
      * @return
-     *     The available_for_order
+     *     The availableForOrder
      */
-    public String getAvailable_for_order() {
-        return available_for_order;
+    public String getAvailableForOrder() {
+        return availableForOrder;
     }
 
     /**
      * 
-     * @param available_for_order
+     * @param availableForOrder
      *     The available_for_order
      */
-    public void setAvailable_for_order(String available_for_order) {
-        this.available_for_order = available_for_order;
+    public void setAvailableForOrder(String availableForOrder) {
+        this.availableForOrder = availableForOrder;
     }
 
     /**
      * 
      * @return
-     *     The available_date
+     *     The availableDate
      */
-    public String getAvailable_date() {
-        return available_date;
+    public String getAvailableDate() {
+        return availableDate;
     }
 
     /**
      * 
-     * @param available_date
+     * @param availableDate
      *     The available_date
      */
-    public void setAvailable_date(String available_date) {
-        this.available_date = available_date;
+    public void setAvailableDate(String availableDate) {
+        this.availableDate = availableDate;
     }
 
     /**
@@ -1131,19 +1147,19 @@ public class Product {
     /**
      * 
      * @return
-     *     The show_price
+     *     The showPrice
      */
-    public String getShow_price() {
-        return show_price;
+    public String getShowPrice() {
+        return showPrice;
     }
 
     /**
      * 
-     * @param show_price
+     * @param showPrice
      *     The show_price
      */
-    public void setShow_price(String show_price) {
-        this.show_price = show_price;
+    public void setShowPrice(String showPrice) {
+        this.showPrice = showPrice;
     }
 
     /**
@@ -1185,181 +1201,253 @@ public class Product {
     /**
      * 
      * @return
+     *     The advancedStockManagement
+     */
+    public String getAdvancedStockManagement() {
+        return advancedStockManagement;
+    }
+
+    /**
+     * 
+     * @param advancedStockManagement
      *     The advanced_stock_management
      */
-    public String getAdvanced_stock_management() {
-        return advanced_stock_management;
-    }
-
-    /**
-     * 
-     * @param advanced_stock_management
-     *     The advanced_stock_management
-     */
-    public void setAdvanced_stock_management(String advanced_stock_management) {
-        this.advanced_stock_management = advanced_stock_management;
+    public void setAdvancedStockManagement(String advancedStockManagement) {
+        this.advancedStockManagement = advancedStockManagement;
     }
 
     /**
      * 
      * @return
+     *     The dateAdd
+     */
+    public String getDateAdd() {
+        return dateAdd;
+    }
+
+    /**
+     * 
+     * @param dateAdd
      *     The date_add
      */
-    public String getDate_add() {
-        return date_add;
-    }
-
-    /**
-     * 
-     * @param date_add
-     *     The date_add
-     */
-    public void setDate_add(String date_add) {
-        this.date_add = date_add;
+    public void setDateAdd(String dateAdd) {
+        this.dateAdd = dateAdd;
     }
 
     /**
      * 
      * @return
+     *     The dateUpd
+     */
+    public String getDateUpd() {
+        return dateUpd;
+    }
+
+    /**
+     * 
+     * @param dateUpd
      *     The date_upd
      */
-    public String getDate_upd() {
-        return date_upd;
-    }
-
-    /**
-     * 
-     * @param date_upd
-     *     The date_upd
-     */
-    public void setDate_upd(String date_upd) {
-        this.date_upd = date_upd;
+    public void setDateUpd(String dateUpd) {
+        this.dateUpd = dateUpd;
     }
 
     /**
      * 
      * @return
+     *     The packStockType
+     */
+    public String getPackStockType() {
+        return packStockType;
+    }
+
+    /**
+     * 
+     * @param packStockType
      *     The pack_stock_type
      */
-    public String getPack_stock_type() {
-        return pack_stock_type;
-    }
-
-    /**
-     * 
-     * @param pack_stock_type
-     *     The pack_stock_type
-     */
-    public void setPack_stock_type(String pack_stock_type) {
-        this.pack_stock_type = pack_stock_type;
+    public void setPackStockType(String packStockType) {
+        this.packStockType = packStockType;
     }
 
     /**
      * 
      * @return
-     *     The nameProduct
+     *     The metaDescription
      */
-    public List<NameProduct> getNameProduct() {
-        return nameProduct;
+    public List<MetaDescription> getMetaDescription() {
+        return metaDescription;
     }
 
     /**
      * 
-     * @param nameProduct
-     *     The nameProduct
+     * @param metaDescription
+     *     The meta_description
      */
-    public void setNameProduct(List<NameProduct> nameProduct) {
-        this.nameProduct = nameProduct;
-    }
-
-    /**
-     * 
-     * @return
-     *     The descriptionProduct
-     */
-    public List<DescriptionProduct> getDescriptionProduct() {
-        return descriptionProduct;
-    }
-
-    /**
-     * 
-     * @param descriptionProduct
-     *     The descriptionProduct
-     */
-    public void setDescriptionProduct(List<DescriptionProduct> descriptionProduct) {
-        this.descriptionProduct = descriptionProduct;
+    public void setMetaDescription(List<MetaDescription> metaDescription) {
+        this.metaDescription = metaDescription;
     }
 
     /**
      * 
      * @return
+     *     The metaKeywords
+     */
+    public List<MetaKeyword> getMetaKeywords() {
+        return metaKeywords;
+    }
+
+    /**
+     * 
+     * @param metaKeywords
+     *     The meta_keywords
+     */
+    public void setMetaKeywords(List<MetaKeyword> metaKeywords) {
+        this.metaKeywords = metaKeywords;
+    }
+
+    /**
+     * 
+     * @return
+     *     The metaTitle
+     */
+    public List<MetaTitle> getMetaTitle() {
+        return metaTitle;
+    }
+
+    /**
+     * 
+     * @param metaTitle
+     *     The meta_title
+     */
+    public void setMetaTitle(List<MetaTitle> metaTitle) {
+        this.metaTitle = metaTitle;
+    }
+
+    /**
+     * 
+     * @return
+     *     The linkRewrite
+     */
+    public List<LinkRewrite> getLinkRewrite() {
+        return linkRewrite;
+    }
+
+    /**
+     * 
+     * @param linkRewrite
+     *     The link_rewrite
+     */
+    public void setLinkRewrite(List<LinkRewrite> linkRewrite) {
+        this.linkRewrite = linkRewrite;
+    }
+
+    /**
+     * 
+     * @return
+     *     The name
+     */
+    public List<Name> getName() {
+        return name;
+    }
+
+    /**
+     * 
+     * @param name
+     *     The name
+     */
+    public void setName(List<Name> name) {
+        this.name = name;
+    }
+
+    /**
+     * 
+     * @return
+     *     The description
+     */
+    public List<Description> getDescription() {
+        return description;
+    }
+
+    /**
+     * 
+     * @param description
+     *     The description
+     */
+    public void setDescription(List<Description> description) {
+        this.description = description;
+    }
+
+    /**
+     * 
+     * @return
+     *     The descriptionShort
+     */
+    public List<DescriptionShort> getDescriptionShort() {
+        return descriptionShort;
+    }
+
+    /**
+     * 
+     * @param descriptionShort
      *     The description_short
      */
-    public List<DescriptionShortProduct> getDescription_short() {
-        return description_short;
-    }
-
-    /**
-     * 
-     * @param description_short
-     *     The description_short
-     */
-    public void setDescription_short(List<DescriptionShortProduct> description_short) {
-        this.description_short = description_short;
+    public void setDescriptionShort(List<DescriptionShort> descriptionShort) {
+        this.descriptionShort = descriptionShort;
     }
 
     /**
      * 
      * @return
+     *     The availableNow
+     */
+    public List<AvailableNow> getAvailableNow() {
+        return availableNow;
+    }
+
+    /**
+     * 
+     * @param availableNow
      *     The available_now
      */
-    public List<Available_now> getAvailable_now() {
-        return available_now;
-    }
-
-    /**
-     * 
-     * @param available_now
-     *     The available_now
-     */
-    public void setAvailable_now(List<Available_now> available_now) {
-        this.available_now = available_now;
+    public void setAvailableNow(List<AvailableNow> availableNow) {
+        this.availableNow = availableNow;
     }
 
     /**
      * 
      * @return
-     *     The available_later
+     *     The availableLater
      */
-    public List<Available_later> getAvailable_later() {
-        return available_later;
+    public List<AvailableLater> getAvailableLater() {
+        return availableLater;
     }
 
     /**
      * 
-     * @param available_later
+     * @param availableLater
      *     The available_later
      */
-    public void setAvailable_later(List<Available_later> available_later) {
-        this.available_later = available_later;
+    public void setAvailableLater(List<AvailableLater> availableLater) {
+        this.availableLater = availableLater;
     }
 
     /**
      * 
      * @return
-     *     The associationsProduct
+     *     The associations
      */
-    public AssociationsProduct getAssociationsProduct() {
-        return associationsProduct;
+    public Associations getAssociations() {
+        return associations;
     }
 
     /**
      * 
-     * @param associationsProduct
-     *     The associationsProduct
+     * @param associations
+     *     The associations
      */
-    public void setAssociationsProduct(AssociationsProduct associationsProduct) {
-        this.associationsProduct = associationsProduct;
+    public void setAssociations(Associations associations) {
+        this.associations = associations;
     }
 
 }

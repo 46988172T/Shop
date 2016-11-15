@@ -15,40 +15,52 @@ public class Category {
     private Integer id;
     @SerializedName("id_parent")
     @Expose
-    private String id_parent;
+    private String idParent;
     @SerializedName("level_depth")
     @Expose
-    private String level_depth;
+    private String levelDepth;
     @SerializedName("nb_products_recursive")
     @Expose
-    private String nb_products_recursive;
+    private String nbProductsRecursive;
     @SerializedName("active")
     @Expose
     private String active;
     @SerializedName("id_shop_default")
     @Expose
-    private String id_shop_default;
+    private String idShopDefault;
     @SerializedName("is_root_category")
     @Expose
-    private String is_root_category;
+    private String isRootCategory;
     @SerializedName("position")
     @Expose
     private String position;
     @SerializedName("date_add")
     @Expose
-    private String date_add;
+    private String dateAdd;
     @SerializedName("date_upd")
     @Expose
-    private String date_upd;
-    @SerializedName("nameCategory")
+    private String dateUpd;
+    @SerializedName("name")
     @Expose
-    private List<NameCategory> nameCategory = new ArrayList<NameCategory>();
-    @SerializedName("descriptionCategory")
+    private List<Name> name = new ArrayList<Name>();
+    @SerializedName("link_rewrite")
     @Expose
-    private List<DescriptionCategory> descriptionCategory = new ArrayList<DescriptionCategory>();
-    @SerializedName("associationsCategories")
+    private List<LinkRewrite> linkRewrite = new ArrayList<LinkRewrite>();
+    @SerializedName("description")
     @Expose
-    private AssociationsCategory associationsCategories;
+    private List<Description> description = new ArrayList<Description>();
+    @SerializedName("meta_title")
+    @Expose
+    private List<MetaTitle> metaTitle = new ArrayList<MetaTitle>();
+    @SerializedName("meta_description")
+    @Expose
+    private List<MetaDescription> metaDescription = new ArrayList<MetaDescription>();
+    @SerializedName("meta_keywords")
+    @Expose
+    private List<MetaKeyword> metaKeywords = new ArrayList<MetaKeyword>();
+    @SerializedName("associations")
+    @Expose
+    private Associations associations;
 
     /**
      * No args constructor for use in serialization
@@ -59,38 +71,42 @@ public class Category {
 
     /**
      * 
+     * @param levelDepth
      * @param position
-     * @param level_depth
-     * @param date_upd
-     * @param link_rewrite
-     * @param meta_keywords
-     * @param date_add
-     * @param id_shop_default
-     * @param is_root_category
+     * @param idShopDefault
+     * @param metaKeywords
+     * @param metaDescription
+     * @param metaTitle
      * @param id
-     * @param meta_description
-     * @param id_parent
-     * @param descriptionCategory
-     * @param nb_products_recursive
-     * @param nameCategory
-     * @param associationsCategories
+     * @param dateAdd
+     * @param nbProductsRecursive
+     * @param dateUpd
+     * @param description
+     * @param name
+     * @param associations
+     * @param idParent
      * @param active
-     * @param meta_title
+     * @param isRootCategory
+     * @param linkRewrite
      */
-    public Category(Integer id, String id_parent, String level_depth, String nb_products_recursive, String active, String id_shop_default, String is_root_category, String position, String date_add, String date_upd, List<NameCategory> nameCategory, List<DescriptionCategory> descriptionCategory, AssociationsCategory associationsCategories) {
+    public Category(Integer id, String idParent, String levelDepth, String nbProductsRecursive, String active, String idShopDefault, String isRootCategory, String position, String dateAdd, String dateUpd, List<Name> name, List<LinkRewrite> linkRewrite, List<Description> description, List<MetaTitle> metaTitle, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, Associations associations) {
         this.id = id;
-        this.id_parent = id_parent;
-        this.level_depth = level_depth;
-        this.nb_products_recursive = nb_products_recursive;
+        this.idParent = idParent;
+        this.levelDepth = levelDepth;
+        this.nbProductsRecursive = nbProductsRecursive;
         this.active = active;
-        this.id_shop_default = id_shop_default;
-        this.is_root_category = is_root_category;
+        this.idShopDefault = idShopDefault;
+        this.isRootCategory = isRootCategory;
         this.position = position;
-        this.date_add = date_add;
-        this.date_upd = date_upd;
-        this.nameCategory = nameCategory;
-        this.descriptionCategory = descriptionCategory;
-        this.associationsCategories = associationsCategories;
+        this.dateAdd = dateAdd;
+        this.dateUpd = dateUpd;
+        this.name = name;
+        this.linkRewrite = linkRewrite;
+        this.description = description;
+        this.metaTitle = metaTitle;
+        this.metaDescription = metaDescription;
+        this.metaKeywords = metaKeywords;
+        this.associations = associations;
     }
 
     /**
@@ -114,55 +130,55 @@ public class Category {
     /**
      * 
      * @return
-     *     The id_parent
+     *     The idParent
      */
-    public String getId_parent() {
-        return id_parent;
+    public String getIdParent() {
+        return idParent;
     }
 
     /**
      * 
-     * @param id_parent
+     * @param idParent
      *     The id_parent
      */
-    public void setId_parent(String id_parent) {
-        this.id_parent = id_parent;
+    public void setIdParent(String idParent) {
+        this.idParent = idParent;
     }
 
     /**
      * 
      * @return
-     *     The level_depth
+     *     The levelDepth
      */
-    public String getLevel_depth() {
-        return level_depth;
+    public String getLevelDepth() {
+        return levelDepth;
     }
 
     /**
      * 
-     * @param level_depth
+     * @param levelDepth
      *     The level_depth
      */
-    public void setLevel_depth(String level_depth) {
-        this.level_depth = level_depth;
+    public void setLevelDepth(String levelDepth) {
+        this.levelDepth = levelDepth;
     }
 
     /**
      * 
      * @return
-     *     The nb_products_recursive
+     *     The nbProductsRecursive
      */
-    public String getNb_products_recursive() {
-        return nb_products_recursive;
+    public String getNbProductsRecursive() {
+        return nbProductsRecursive;
     }
 
     /**
      * 
-     * @param nb_products_recursive
+     * @param nbProductsRecursive
      *     The nb_products_recursive
      */
-    public void setNb_products_recursive(String nb_products_recursive) {
-        this.nb_products_recursive = nb_products_recursive;
+    public void setNbProductsRecursive(String nbProductsRecursive) {
+        this.nbProductsRecursive = nbProductsRecursive;
     }
 
     /**
@@ -186,37 +202,37 @@ public class Category {
     /**
      * 
      * @return
-     *     The id_shop_default
+     *     The idShopDefault
      */
-    public String getId_shop_default() {
-        return id_shop_default;
+    public String getIdShopDefault() {
+        return idShopDefault;
     }
 
     /**
      * 
-     * @param id_shop_default
+     * @param idShopDefault
      *     The id_shop_default
      */
-    public void setId_shop_default(String id_shop_default) {
-        this.id_shop_default = id_shop_default;
+    public void setIdShopDefault(String idShopDefault) {
+        this.idShopDefault = idShopDefault;
     }
 
     /**
      * 
      * @return
-     *     The is_root_category
+     *     The isRootCategory
      */
-    public String getIs_root_category() {
-        return is_root_category;
+    public String getIsRootCategory() {
+        return isRootCategory;
     }
 
     /**
      * 
-     * @param is_root_category
+     * @param isRootCategory
      *     The is_root_category
      */
-    public void setIs_root_category(String is_root_category) {
-        this.is_root_category = is_root_category;
+    public void setIsRootCategory(String isRootCategory) {
+        this.isRootCategory = isRootCategory;
     }
 
     /**
@@ -240,98 +256,163 @@ public class Category {
     /**
      * 
      * @return
+     *     The dateAdd
+     */
+    public String getDateAdd() {
+        return dateAdd;
+    }
+
+    /**
+     * 
+     * @param dateAdd
      *     The date_add
      */
-    public String getDate_add() {
-        return date_add;
-    }
-
-    /**
-     * 
-     * @param date_add
-     *     The date_add
-     */
-    public void setDate_add(String date_add) {
-        this.date_add = date_add;
+    public void setDateAdd(String dateAdd) {
+        this.dateAdd = dateAdd;
     }
 
     /**
      * 
      * @return
+     *     The dateUpd
+     */
+    public String getDateUpd() {
+        return dateUpd;
+    }
+
+    /**
+     * 
+     * @param dateUpd
      *     The date_upd
      */
-    public String getDate_upd() {
-        return date_upd;
-    }
-
-    /**
-     * 
-     * @param date_upd
-     *     The date_upd
-     */
-    public void setDate_upd(String date_upd) {
-        this.date_upd = date_upd;
+    public void setDateUpd(String dateUpd) {
+        this.dateUpd = dateUpd;
     }
 
     /**
      * 
      * @return
-     *     The nameCategory
+     *     The name
      */
-    public List<NameCategory> getNameCategory() {
-        return nameCategory;
+    public List<Name> getName() {
+        return name;
     }
 
     /**
      * 
-     * @param nameCategory
-     *     The nameCategory
+     * @param name
+     *     The name
      */
-    public void setNameCategory(List<NameCategory> nameCategory) {
-        this.nameCategory = nameCategory;
+    public void setName(List<Name> name) {
+        this.name = name;
     }
 
     /**
      * 
      * @return
-     *     The descriptionCategory
+     *     The linkRewrite
      */
-    public List<DescriptionCategory> getDescriptionCategory() {
-        return descriptionCategory;
+    public List<LinkRewrite> getLinkRewrite() {
+        return linkRewrite;
     }
 
     /**
      * 
-     * @param descriptionCategory
-     *     The descriptionCategory
+     * @param linkRewrite
+     *     The link_rewrite
      */
-    public void setDescriptionCategory(List<DescriptionCategory> descriptionCategory) {
-        this.descriptionCategory = descriptionCategory;
+    public void setLinkRewrite(List<LinkRewrite> linkRewrite) {
+        this.linkRewrite = linkRewrite;
     }
 
     /**
      * 
-     * @param meta_description
+     * @return
+     *     The description
+     */
+    public List<Description> getDescription() {
+        return description;
+    }
+
+    /**
+     * 
+     * @param description
+     *     The description
+     */
+    public void setDescription(List<Description> description) {
+        this.description = description;
+    }
+
+    /**
+     * 
+     * @return
+     *     The metaTitle
+     */
+    public List<MetaTitle> getMetaTitle() {
+        return metaTitle;
+    }
+
+    /**
+     * 
+     * @param metaTitle
+     *     The meta_title
+     */
+    public void setMetaTitle(List<MetaTitle> metaTitle) {
+        this.metaTitle = metaTitle;
+    }
+
+    /**
+     * 
+     * @return
+     *     The metaDescription
+     */
+    public List<MetaDescription> getMetaDescription() {
+        return metaDescription;
+    }
+
+    /**
+     * 
+     * @param metaDescription
      *     The meta_description
      */
-
-
-    /**
-     * 
-     * @return
-     *     The associationsCategories
-     */
-    public AssociationsCategory getAssociationsCategories() {
-        return associationsCategories;
+    public void setMetaDescription(List<MetaDescription> metaDescription) {
+        this.metaDescription = metaDescription;
     }
 
     /**
      * 
-     * @param associationsCategories
-     *     The associationsCategories
+     * @return
+     *     The metaKeywords
      */
-    public void setAssociationsCategories(AssociationsCategory associationsCategories) {
-        this.associationsCategories = associationsCategories;
+    public List<MetaKeyword> getMetaKeywords() {
+        return metaKeywords;
+    }
+
+    /**
+     * 
+     * @param metaKeywords
+     *     The meta_keywords
+     */
+    public void setMetaKeywords(List<MetaKeyword> metaKeywords) {
+        this.metaKeywords = metaKeywords;
+    }
+
+    /**
+     * 
+     * @return
+     *     The associations
+     */
+    public Associations getAssociations() {
+        return associations;
+    }
+
+    /**
+     * 
+     * @param associations
+     *     The associations
+     */
+    public void setAssociations(Associations associations) {
+        this.associations = associations;
     }
 
 }

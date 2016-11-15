@@ -16,9 +16,9 @@ public class ProductFeature {
     @SerializedName("position")
     @Expose
     private String position;
-    @SerializedName("nameProductFeature")
+    @SerializedName("name")
     @Expose
-    private List<NameProductFeature> nameProductFeature = new ArrayList<NameProductFeature>();
+    private List<Name> name = new ArrayList<Name>();
 
     /**
      * No args constructor for use in serialization
@@ -31,12 +31,12 @@ public class ProductFeature {
      * 
      * @param position
      * @param id
-     * @param nameProductFeature
+     * @param name
      */
-    public ProductFeature(Integer id, String position, List<NameProductFeature> nameProductFeature) {
+    public ProductFeature(Integer id, String position, List<Name> name) {
         this.id = id;
         this.position = position;
-        this.nameProductFeature = nameProductFeature;
+        this.name = name;
     }
 
     /**
@@ -78,19 +78,19 @@ public class ProductFeature {
     /**
      * 
      * @return
-     *     The nameProductFeature
+     *     The name
      */
-    public List<NameProductFeature> getNameProductFeature() {
-        return nameProductFeature;
+    public List<Name> getName() {
+        return name;
     }
 
     /**
      * 
-     * @param nameProductFeature
-     *     The nameProductFeature
+     * @param name
+     *     The name
      */
-    public void setNameProductFeature(List<NameProductFeature> nameProductFeature) {
-        this.nameProductFeature = nameProductFeature;
+    public void setName(List<Name> name) {
+        this.name = name;
     }
 
 }
