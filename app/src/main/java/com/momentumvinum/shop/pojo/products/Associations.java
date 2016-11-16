@@ -4,26 +4,14 @@ package com.momentumvinum.shop.pojo.products;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Associations {
 
-    @SerializedName("categories")
-    @Expose
     private List<Category> categories = new ArrayList<Category>();
-    @SerializedName("images")
-    @Expose
     private List<Image> images = new ArrayList<Image>();
-    @SerializedName("product_features")
-    @Expose
     private List<ProductFeature> productFeatures = new ArrayList<ProductFeature>();
-    @SerializedName("tags")
-    @Expose
     private List<Tag> tags = new ArrayList<Tag>();
-    @SerializedName("stock_availables")
-    @Expose
     private List<StockAvailable> stockAvailables = new ArrayList<StockAvailable>();
 
     /**

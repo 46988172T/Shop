@@ -4,197 +4,71 @@ package com.momentumvinum.shop.pojo.products;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Product {
 
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("id_manufacturer")
-    @Expose
+    private int id;
     private String idManufacturer;
-    @SerializedName("id_supplier")
-    @Expose
     private String idSupplier;
-    @SerializedName("id_category_default")
-    @Expose
     private String idCategoryDefault;
-    @SerializedName("new")
-    @Expose
     private Object _new;
-    @SerializedName("cache_default_attribute")
-    @Expose
     private String cacheDefaultAttribute;
-    @SerializedName("id_default_image")
-    @Expose
     private String idDefaultImage;
-    @SerializedName("id_default_combination")
-    @Expose
-    private Integer idDefaultCombination;
-    @SerializedName("id_tax_rules_group")
-    @Expose
+    private int idDefaultCombination;
     private String idTaxRulesGroup;
-    @SerializedName("position_in_category")
-    @Expose
     private String positionInCategory;
-    @SerializedName("manufacturer_name")
-    @Expose
-    private Boolean manufacturerName;
-    @SerializedName("quantity")
-    @Expose
+    private boolean manufacturerName;
     private String quantity;
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("id_shop_default")
-    @Expose
     private String idShopDefault;
-    @SerializedName("reference")
-    @Expose
     private String reference;
-    @SerializedName("supplier_reference")
-    @Expose
     private String supplierReference;
-    @SerializedName("location")
-    @Expose
     private String location;
-    @SerializedName("width")
-    @Expose
     private String width;
-    @SerializedName("height")
-    @Expose
     private String height;
-    @SerializedName("depth")
-    @Expose
     private String depth;
-    @SerializedName("weight")
-    @Expose
     private String weight;
-    @SerializedName("quantity_discount")
-    @Expose
     private String quantityDiscount;
-    @SerializedName("ean13")
-    @Expose
     private String ean13;
-    @SerializedName("upc")
-    @Expose
     private String upc;
-    @SerializedName("cache_is_pack")
-    @Expose
     private String cacheIsPack;
-    @SerializedName("cache_has_attachments")
-    @Expose
     private String cacheHasAttachments;
-    @SerializedName("is_virtual")
-    @Expose
     private String isVirtual;
-    @SerializedName("on_sale")
-    @Expose
     private String onSale;
-    @SerializedName("online_only")
-    @Expose
     private String onlineOnly;
-    @SerializedName("ecotax")
-    @Expose
     private String ecotax;
-    @SerializedName("minimal_quantity")
-    @Expose
     private String minimalQuantity;
-    @SerializedName("price")
-    @Expose
     private String price;
-    @SerializedName("wholesale_price")
-    @Expose
     private String wholesalePrice;
-    @SerializedName("unity")
-    @Expose
     private String unity;
-    @SerializedName("unit_price_ratio")
-    @Expose
     private String unitPriceRatio;
-    @SerializedName("additional_shipping_cost")
-    @Expose
     private String additionalShippingCost;
-    @SerializedName("customizable")
-    @Expose
     private String customizable;
-    @SerializedName("text_fields")
-    @Expose
     private String textFields;
-    @SerializedName("uploadable_files")
-    @Expose
     private String uploadableFiles;
-    @SerializedName("active")
-    @Expose
     private String active;
-    @SerializedName("redirect_type")
-    @Expose
     private String redirectType;
-    @SerializedName("id_product_redirected")
-    @Expose
     private String idProductRedirected;
-    @SerializedName("available_for_order")
-    @Expose
     private String availableForOrder;
-    @SerializedName("available_date")
-    @Expose
     private String availableDate;
-    @SerializedName("condition")
-    @Expose
     private String condition;
-    @SerializedName("show_price")
-    @Expose
     private String showPrice;
-    @SerializedName("indexed")
-    @Expose
     private String indexed;
-    @SerializedName("visibility")
-    @Expose
     private String visibility;
-    @SerializedName("advanced_stock_management")
-    @Expose
     private String advancedStockManagement;
-    @SerializedName("date_add")
-    @Expose
     private String dateAdd;
-    @SerializedName("date_upd")
-    @Expose
     private String dateUpd;
-    @SerializedName("pack_stock_type")
-    @Expose
     private String packStockType;
-    @SerializedName("meta_description")
-    @Expose
     private List<MetaDescription> metaDescription = new ArrayList<MetaDescription>();
-    @SerializedName("meta_keywords")
-    @Expose
     private List<MetaKeyword> metaKeywords = new ArrayList<MetaKeyword>();
-    @SerializedName("meta_title")
-    @Expose
     private List<MetaTitle> metaTitle = new ArrayList<MetaTitle>();
-    @SerializedName("link_rewrite")
-    @Expose
     private List<LinkRewrite> linkRewrite = new ArrayList<LinkRewrite>();
-    @SerializedName("name")
-    @Expose
     private List<Name> name = new ArrayList<Name>();
-    @SerializedName("description")
-    @Expose
     private List<Description> description = new ArrayList<Description>();
-    @SerializedName("description_short")
-    @Expose
     private List<DescriptionShort> descriptionShort = new ArrayList<DescriptionShort>();
-    @SerializedName("available_now")
-    @Expose
     private List<AvailableNow> availableNow = new ArrayList<AvailableNow>();
-    @SerializedName("available_later")
-    @Expose
     private List<AvailableLater> availableLater = new ArrayList<AvailableLater>();
-    @SerializedName("associations")
-    @Expose
     private Associations associations;
 
     /**
@@ -269,7 +143,7 @@ public class Product {
      * @param ean13
      * @param idManufacturer
      */
-    public Product(Integer id, String idManufacturer, String idSupplier, String idCategoryDefault, Object _new, String cacheDefaultAttribute, String idDefaultImage, Integer idDefaultCombination, String idTaxRulesGroup, String positionInCategory, Boolean manufacturerName, String quantity, String type, String idShopDefault, String reference, String supplierReference, String location, String width, String height, String depth, String weight, String quantityDiscount, String ean13, String upc, String cacheIsPack, String cacheHasAttachments, String isVirtual, String onSale, String onlineOnly, String ecotax, String minimalQuantity, String price, String wholesalePrice, String unity, String unitPriceRatio, String additionalShippingCost, String customizable, String textFields, String uploadableFiles, String active, String redirectType, String idProductRedirected, String availableForOrder, String availableDate, String condition, String showPrice, String indexed, String visibility, String advancedStockManagement, String dateAdd, String dateUpd, String packStockType, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, List<MetaTitle> metaTitle, List<LinkRewrite> linkRewrite, List<Name> name, List<Description> description, List<DescriptionShort> descriptionShort, List<AvailableNow> availableNow, List<AvailableLater> availableLater, Associations associations) {
+    public Product(int id, String idManufacturer, String idSupplier, String idCategoryDefault, Object _new, String cacheDefaultAttribute, String idDefaultImage, int idDefaultCombination, String idTaxRulesGroup, String positionInCategory, boolean manufacturerName, String quantity, String type, String idShopDefault, String reference, String supplierReference, String location, String width, String height, String depth, String weight, String quantityDiscount, String ean13, String upc, String cacheIsPack, String cacheHasAttachments, String isVirtual, String onSale, String onlineOnly, String ecotax, String minimalQuantity, String price, String wholesalePrice, String unity, String unitPriceRatio, String additionalShippingCost, String customizable, String textFields, String uploadableFiles, String active, String redirectType, String idProductRedirected, String availableForOrder, String availableDate, String condition, String showPrice, String indexed, String visibility, String advancedStockManagement, String dateAdd, String dateUpd, String packStockType, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, List<MetaTitle> metaTitle, List<LinkRewrite> linkRewrite, List<Name> name, List<Description> description, List<DescriptionShort> descriptionShort, List<AvailableNow> availableNow, List<AvailableLater> availableLater, Associations associations) {
         this.id = id;
         this.idManufacturer = idManufacturer;
         this.idSupplier = idSupplier;
@@ -339,7 +213,7 @@ public class Product {
      * @return
      *     The id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -348,7 +222,7 @@ public class Product {
      * @param id
      *     The id
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -465,7 +339,7 @@ public class Product {
      * @return
      *     The idDefaultCombination
      */
-    public Integer getIdDefaultCombination() {
+    public int getIdDefaultCombination() {
         return idDefaultCombination;
     }
 
@@ -474,7 +348,7 @@ public class Product {
      * @param idDefaultCombination
      *     The id_default_combination
      */
-    public void setIdDefaultCombination(Integer idDefaultCombination) {
+    public void setIdDefaultCombination(int idDefaultCombination) {
         this.idDefaultCombination = idDefaultCombination;
     }
 
@@ -519,7 +393,7 @@ public class Product {
      * @return
      *     The manufacturerName
      */
-    public Boolean getManufacturerName() {
+    public boolean isManufacturerName() {
         return manufacturerName;
     }
 
@@ -528,7 +402,7 @@ public class Product {
      * @param manufacturerName
      *     The manufacturer_name
      */
-    public void setManufacturerName(Boolean manufacturerName) {
+    public void setManufacturerName(boolean manufacturerName) {
         this.manufacturerName = manufacturerName;
     }
 

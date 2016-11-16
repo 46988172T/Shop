@@ -4,14 +4,11 @@ package com.momentumvinum.shop.pojo.categories;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Associations {
 
-    @SerializedName("products")
-    @Expose
+    private List<Category_> categories = new ArrayList<Category_>();
     private List<Product> products = new ArrayList<Product>();
 
     /**
@@ -23,10 +20,30 @@ public class Associations {
 
     /**
      * 
+     * @param categories
      * @param products
      */
-    public Associations(List<Product> products) {
+    public Associations(List<Category_> categories, List<Product> products) {
+        this.categories = categories;
         this.products = products;
+    }
+
+    /**
+     * 
+     * @return
+     *     The categories
+     */
+    public List<Category_> getCategories() {
+        return categories;
+    }
+
+    /**
+     * 
+     * @param categories
+     *     The categories
+     */
+    public void setCategories(List<Category_> categories) {
+        this.categories = categories;
     }
 
     /**

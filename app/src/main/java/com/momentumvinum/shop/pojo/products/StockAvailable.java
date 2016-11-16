@@ -2,17 +2,11 @@
 package com.momentumvinum.shop.pojo.products;
 
 import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class StockAvailable {
 
-    @SerializedName("id")
-    @Expose
     private String id;
-    @SerializedName("id_product_attribute")
-    @Expose
     private String idProductAttribute;
 
     /**

@@ -4,62 +4,26 @@ package com.momentumvinum.shop.pojo.categories;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Category {
 
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("id_parent")
-    @Expose
+    private int id;
     private String idParent;
-    @SerializedName("level_depth")
-    @Expose
     private String levelDepth;
-    @SerializedName("nb_products_recursive")
-    @Expose
     private String nbProductsRecursive;
-    @SerializedName("active")
-    @Expose
     private String active;
-    @SerializedName("id_shop_default")
-    @Expose
     private String idShopDefault;
-    @SerializedName("is_root_category")
-    @Expose
     private String isRootCategory;
-    @SerializedName("position")
-    @Expose
     private String position;
-    @SerializedName("date_add")
-    @Expose
     private String dateAdd;
-    @SerializedName("date_upd")
-    @Expose
     private String dateUpd;
-    @SerializedName("name")
-    @Expose
     private List<Name> name = new ArrayList<Name>();
-    @SerializedName("link_rewrite")
-    @Expose
     private List<LinkRewrite> linkRewrite = new ArrayList<LinkRewrite>();
-    @SerializedName("description")
-    @Expose
     private List<Description> description = new ArrayList<Description>();
-    @SerializedName("meta_title")
-    @Expose
     private List<MetaTitle> metaTitle = new ArrayList<MetaTitle>();
-    @SerializedName("meta_description")
-    @Expose
     private List<MetaDescription> metaDescription = new ArrayList<MetaDescription>();
-    @SerializedName("meta_keywords")
-    @Expose
     private List<MetaKeyword> metaKeywords = new ArrayList<MetaKeyword>();
-    @SerializedName("associations")
-    @Expose
     private Associations associations;
 
     /**
@@ -89,7 +53,7 @@ public class Category {
      * @param isRootCategory
      * @param linkRewrite
      */
-    public Category(Integer id, String idParent, String levelDepth, String nbProductsRecursive, String active, String idShopDefault, String isRootCategory, String position, String dateAdd, String dateUpd, List<Name> name, List<LinkRewrite> linkRewrite, List<Description> description, List<MetaTitle> metaTitle, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, Associations associations) {
+    public Category(int id, String idParent, String levelDepth, String nbProductsRecursive, String active, String idShopDefault, String isRootCategory, String position, String dateAdd, String dateUpd, List<Name> name, List<LinkRewrite> linkRewrite, List<Description> description, List<MetaTitle> metaTitle, List<MetaDescription> metaDescription, List<MetaKeyword> metaKeywords, Associations associations) {
         this.id = id;
         this.idParent = idParent;
         this.levelDepth = levelDepth;
@@ -114,7 +78,7 @@ public class Category {
      * @return
      *     The id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -123,7 +87,7 @@ public class Category {
      * @param id
      *     The id
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
