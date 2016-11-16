@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/vinos"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Vinos">
+            <menu>
+                <item
+                    android:id="@+id/tipos"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Tipos" />
+                <item
+                    android:id="@+id/precio"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Por precio" />
+                <item
+                    android:id="@+id/denominacionOrigen"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Denominación de origen" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/destilados"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Destilados" />
+        <item
+            android:id="@+id/otros"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Otros" />
+        <item
+            android:id="@+id/promociones"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Promociones" />
+        <item
+            android:id="@+id/masVendidos"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Más vendidos" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
