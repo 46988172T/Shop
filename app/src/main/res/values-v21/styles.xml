@@ -16,5 +16,7 @@
         <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
         <item name="android:textColorSecondary">@color/colorAccent</item>
         <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorSecondaryInverse">#FFAD222B</item>
     </style>
 </resources>

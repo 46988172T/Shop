@@ -1,9 +1,9 @@
 package com.momentumvinum.shop;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,9 +12,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.momentumvinum.shop.activities.Categories;
+import com.momentumvinum.shop.api.MomentumApi;
+import com.momentumvinum.shop.classes.FontsOverride;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public Button buttonApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +31,13 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        buttonApi = (Button)findViewById(R.id.buttonApi);
+        buttonApi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //activamos la api
+                MomentumApi momentumApi = new MomentumApi();
+                momentumApi.mostrarCategorias();
             }
         });
 
@@ -40,6 +49,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //cambio de fuente del Navigation drawer
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/Fuente.ttf");
     }
 
     @Override
@@ -81,7 +93,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.vinos) {
-            // Handle the camera action
+            Intent categoriesIntent = new Intent(this, Categories.class);
+            startActivity(categoriesIntent);
         } else if (id == R.id.destilados) {
 
         } else if (id == R.id.otros) {

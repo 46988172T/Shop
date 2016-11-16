@@ -1,9 +1,14 @@
 package com.momentumvinum.shop.api;
 
 import android.util.Log;
+
+import com.momentumvinum.shop.MainActivity;
+import com.momentumvinum.shop.activities.Categories;
 import com.momentumvinum.shop.pojo.categories.ModelCategories;
 import com.momentumvinum.shop.pojo.products.ModelProducts;
 
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,6 +42,7 @@ public class MomentumApi {
             @Override
             public void onResponse(Call<ModelCategories> call, Response<ModelCategories> response) {
                 ModelCategories categories = response.body();
+                Categories.listaCategories = (ArrayList)categories.getCategories();
                 Log.e("CORRECTO --->", "HAY CONEXIÓN");
                 Log.e("Prueba --->", String.valueOf(response.body().getCategories().get(10).getId()));
             }

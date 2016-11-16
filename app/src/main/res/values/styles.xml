@@ -9,6 +9,12 @@
         <item name="android:colorBackground">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
         <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:textColorSecondaryInverse">#FFAD222B</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:typeface">monospace</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

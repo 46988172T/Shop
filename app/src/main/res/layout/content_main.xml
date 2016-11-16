@@ -13,4 +13,12 @@
     tools:context="com.momentumvinum.shop.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <Button
+        android:text="ACTIVA API"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonApi"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
