@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.momentumvinum.shop.activities.Categories;
-import com.momentumvinum.shop.pojo.categories.Category;
+import com.momentumvinum.shop.pojos.content_pojos.categories.Category;
 
 import java.util.ArrayList;
 

@@ -7,8 +7,8 @@ import android.widget.GridView;
 
 import com.momentumvinum.shop.R;
 import com.momentumvinum.shop.adapters.CategoriesAdapter;
-import com.momentumvinum.shop.pojo.categories.Category;
-import com.momentumvinum.shop.pojo.categories.Category_;
+import com.momentumvinum.shop.pojos.content_pojos.categories.Category;
+import com.momentumvinum.shop.pojos.content_pojos.categories.Category_;
 
 import java.util.ArrayList;
 

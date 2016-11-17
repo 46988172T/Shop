@@ -1,12 +1,11 @@
 package com.momentumvinum.shop.api;
 
-import com.momentumvinum.shop.pojo.categories.ModelCategories;
-import com.momentumvinum.shop.pojo.products.ModelProducts;
+import com.momentumvinum.shop.pojos.content_pojos.categories.ModelCategories;
+import com.momentumvinum.shop.pojos.content_pojos.products.ModelProducts;
 
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 /**

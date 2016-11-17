@@ -2,10 +2,9 @@ package com.momentumvinum.shop.api;
 
 import android.util.Log;
 
-import com.momentumvinum.shop.MainActivity;
 import com.momentumvinum.shop.activities.Categories;
-import com.momentumvinum.shop.pojo.categories.ModelCategories;
-import com.momentumvinum.shop.pojo.products.ModelProducts;
+import com.momentumvinum.shop.pojos.content_pojos.categories.ModelCategories;
+import com.momentumvinum.shop.pojos.content_pojos.products.ModelProducts;
 
 
 import java.util.ArrayList;
