@@ -22,7 +22,7 @@ public class Categories extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
-        ArrayList<Category_> listaAsociacionCategoria= (ArrayList)listaCategories.get(1).getAssociations().getCategories();
+        ArrayList<Category_> listaAsociacionCategoria= (ArrayList)listaCategories.get(2).getAssociations().getCategories();
 
         Log.e("PRUEBA CATS", String.valueOf(listaCategories.get(1).getAssociations().getCategories().size()));
 
@@ -36,7 +36,7 @@ public class Categories extends AppCompatActivity {
 
         Log.e("PRUEBA vinos", String.valueOf(listaCategoriesVinos.size()));
 
-        GridView gridView = (GridView)findViewById(R.id.gridview);
+        GridView gridView = (GridView)findViewById(R.id.gridviewCategorias);
         CategoriesAdapter categoriesAdapter = new CategoriesAdapter(this, listaCategoriesVinos);
         gridView.setAdapter(categoriesAdapter);
     }

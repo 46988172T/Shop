@@ -21,4 +21,10 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/buttonApi" />
 </RelativeLayout>

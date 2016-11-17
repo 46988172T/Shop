@@ -43,7 +43,7 @@ public class MomentumApi {
                 ModelCategories categories = response.body();
                 Categories.listaCategories = (ArrayList)categories.getCategories();
                 Log.e("CORRECTO --->", "HAY CONEXIÓN");
-                Log.e("Prueba --->", String.valueOf(response.body().getCategories().get(10).getId()));
+                Log.e("Prueba --->", String.valueOf(response.body().getCategories().get(2).getId()));
             }
 
             @Override

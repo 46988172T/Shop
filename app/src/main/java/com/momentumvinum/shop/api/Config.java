@@ -7,5 +7,5 @@ package com.momentumvinum.shop.api;
 
 public class Config {
     public static final String BASE_API = "http://www.momentumvinum.com/api/";
-    public static final String TOKEN_API = "1JIYK9MYQEQ98AYMEP46DBGNN44JSP69";
+    public static final String TOKEN_API = "AGC1JAB183WBBUXPIGIDRLBS8TE2NNN7";
 }
