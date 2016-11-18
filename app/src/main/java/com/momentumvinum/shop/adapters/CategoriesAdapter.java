@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.momentumvinum.shop.R;
 import com.momentumvinum.shop.activities.Categories;
 import com.momentumvinum.shop.pojos.content_pojos.categories.Category;
@@ -53,10 +54,9 @@ public class CategoriesAdapter extends BaseAdapter{
         String imagen = "http://www.momentumvinum.com/api/images/categories/"+listaCategorias.get(position).getId()+"?ws_key=AGC1JAB183WBBUXPIGIDRLBS8TE2NNN7";
         Log.e("PRUEBA IMAGEN", String.valueOf(listaCategorias.get(position).getId()));
         Log.e("PRUEBA IMAGEN 2", "http://www.momentumvinum.com/api/images/categories/"+listaCategorias.get(position).getId()+"?ws_key=AGC1JAB183WBBUXPIGIDRLBS8TE2NNN7");
-        //String imagen2 = "https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/14962546_690919224409519_6179692106669420584_n.jpg?oh=5db4cc705b2e6d84f86cf8f7c8e38323&oe=58BE64D3";
+        String imagen2 = "https://mejorconsalud.com/wp-content/uploads/2015/01/vino.jpeg";
         if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = LayoutInflater.from(mContext);
             view = inflater.inflate(R.layout.item_gridview_categories, viewGroup, false);
         }
 
@@ -64,12 +64,13 @@ public class CategoriesAdapter extends BaseAdapter{
         ImageView imagenCategoria = (ImageView) view.findViewById(R.id.imagen_cat);
         TextView nombreCategoria = (TextView) view.findViewById(R.id.nombre_cat);
 
-
-        nombreCategoria.setText(Categories.listaCategoriesVinos.get(position).getName().get(1).getValue());
-        Picasso.with(mContext)
+        /*Picasso.with(mContext)
                 .load(imagen)
                 .fit()
-                .into(imagenCategoria);
+                .into(imagenCategoria);*/
+        //imagenCategoria.setImageResource(R.drawable.ic_menu_camera);
+        Glide.with(mContext).load(imagen).fitCenter().into(imagenCategoria);
+        nombreCategoria.setText(Categories.listaCategoriesVinos.get(position).getName().get(1).getValue());
 
         return view;
     }
