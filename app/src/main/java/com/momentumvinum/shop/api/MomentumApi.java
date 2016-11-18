@@ -5,15 +5,14 @@ import android.util.Log;
 import com.momentumvinum.shop.activities.Categories;
 import com.momentumvinum.shop.pojos.content_pojos.categories.ModelCategories;
 import com.momentumvinum.shop.pojos.content_pojos.products.ModelProducts;
-
-
 import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 
 /**
  * Creador por Leonardo Martínez Ubal el 15/11/2016 a las 21:23.

@@ -1,5 +1,7 @@
 package com.momentumvinum.shop;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -13,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.momentumvinum.shop.activities.Categories;
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        buttonApi = (Button)findViewById(R.id.buttonApi);
+        /*buttonApi = (Button)findViewById(R.id.buttonApi);
         buttonApi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity
                 MomentumApi momentumApi = new MomentumApi();
                 momentumApi.mostrarCategorias();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +55,16 @@ public class MainActivity extends AppCompatActivity
 
         //cambio de fuente del Navigation drawer
         FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/Fuente.ttf");
+
+        /*Fragment fragment = new FragmentMain(); // create a fragement object
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.mainFrame, fragment);
+        ft.commit();*/
+
+        FragmentMain fragmentMain = new FragmentMain();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainFrame,fragmentMain).commit();
+
+
     }
 
     @Override
@@ -89,7 +102,9 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
+        /*Fragment fragment = null;*/
+
         int id = item.getItemId();
 
         if (id == R.id.vinos) {
@@ -106,6 +121,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+
+        /*FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.mainFrame, fragment);
+        ft.commit();*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
