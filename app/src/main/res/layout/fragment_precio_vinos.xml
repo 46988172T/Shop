@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.momentumvinum.shop.vinos_activities.FragmentPrecioVinos">
+    tools:context="com.momentumvinum.shop.vinos_activities.FragmentPrecioVinos"
+    android:background="@color/cardview_shadow_start_color">
 
     <com.jaredrummler.materialspinner.MaterialSpinner
         android:id="@+id/spinner"
@@ -10,4 +11,12 @@
         android:layout_height="wrap_content"
         android:textColor="@color/textColorPrimary"/>
 
-</FrameLayout>
+    <GridView
+        android:id="@+id/gridProductsPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="461dp"
+        android:layout_below="@+id/spinner"
+        android:numColumns="auto_fit"
+        android:padding="2dp"/>
+
+</RelativeLayout>

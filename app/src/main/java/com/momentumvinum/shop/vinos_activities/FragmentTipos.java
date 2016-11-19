@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.momentumvinum.shop.R;
+import com.momentumvinum.shop.adapters.ProductosAdapter;
 import com.momentumvinum.shop.classes.busqueda.BusquedaVinos;
 import com.momentumvinum.shop.pojos.content_pojos.products.Product;
 
@@ -29,7 +31,8 @@ public class FragmentTipos extends Fragment {
     public static ArrayList<Product> productos = new ArrayList<>();
     int idCatSegunPosicion;
 
-
+    GridView gridProducts;
+    ProductosAdapter productosAdapter;
     public FragmentTipos() {
         // Required empty public constructor
     }
@@ -40,6 +43,14 @@ public class FragmentTipos extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_tipos, container, false);
+        gridProducts = (GridView)v.findViewById(R.id.gridProducts);
+
+        //por defecto, TODOS
+        idCatSegunPosicion = 1000;
+        productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+        ProductosAdapter.productosInsert.clear();
+        productosAdapter = new ProductosAdapter(getContext(), productos);
+        gridProducts.setAdapter(productosAdapter);
 
         MaterialSpinner spinner = (MaterialSpinner) v.findViewById(R.id.spinner);
         spinner.setItems(todos, tintos, blancos, rosados, espumosos, fortificados);
@@ -53,31 +64,55 @@ public class FragmentTipos extends Fragment {
                     case 0:
                         idCatSegunPosicion = 1000;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría TODOS tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 1:
                         idCatSegunPosicion = 1002;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría tintos tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 2:
                         idCatSegunPosicion = 1003;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría blancos tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 3:
                         idCatSegunPosicion = 1004;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría rosados tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 4:
                         idCatSegunPosicion = 1005;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría espumosos tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 5:
                         idCatSegunPosicion = 1106;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
+                        ProductosAdapter.productosInsert.clear();
+                        productosAdapter = new ProductosAdapter(getContext(), productos);
+                        gridProducts.setAdapter(productosAdapter);
+
                         Snackbar.make(view, "La categoría fortificados tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                 }
