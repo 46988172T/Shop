@@ -35,6 +35,7 @@ public class FragmentNovedades extends Fragment {
                 //activamos la api
                 MomentumApi momentumApi = new MomentumApi();
                 momentumApi.mostrarCategorias();
+                momentumApi.mostrarProductos();
             }
         });
         return v;

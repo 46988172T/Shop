@@ -2,6 +2,7 @@ package com.momentumvinum.shop;
 
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
@@ -20,7 +21,7 @@ import com.momentumvinum.shop.fragmentsPrincipal.FragmentNovedades;
 public class FragmentMain extends Fragment {
 
     private FragmentTabHost mTabHost;
-
+    private static View rootView;
     public FragmentMain() {
         // Required empty public constructor
     }
@@ -48,7 +49,7 @@ public class FragmentMain extends Fragment {
         });
         return v;*/
 
-        View rootView = inflater.inflate(R.layout.fragment_main,container, false);
+        rootView = inflater.inflate(R.layout.fragment_main,container, false);
 
 
         mTabHost = (FragmentTabHost)rootView.findViewById(android.R.id.tabhost);
@@ -61,6 +62,22 @@ public class FragmentMain extends Fragment {
 
 
         return rootView;
+    }
+
+    public static void connOkCats(){
+        Snackbar.make(rootView, "Descarga de categorías correcta", Snackbar.LENGTH_LONG).show();
+    }
+
+    public static void connOkProds(){
+        Snackbar.make(rootView, "Descarga de productos correcta", Snackbar.LENGTH_LONG).show();
+    }
+
+    public static void connFailCats(){
+        Snackbar.make(rootView, "Descarga de categorías NO correcta", Snackbar.LENGTH_LONG).show();
+    }
+
+    public static void connFailProds(){
+        Snackbar.make(rootView, "Descarga de productos NO correcta", Snackbar.LENGTH_LONG).show();
     }
 
 }

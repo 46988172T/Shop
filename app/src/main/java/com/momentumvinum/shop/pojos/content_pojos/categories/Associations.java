@@ -9,7 +9,7 @@ import javax.annotation.Generated;
 public class Associations {
 
     private List<Category_> categories = new ArrayList<Category_>();
-    private List<Product> products = new ArrayList<Product>();
+    private List<Product_> products = new ArrayList<Product_>();
 
     /**
      * No args constructor for use in serialization
@@ -23,7 +23,7 @@ public class Associations {
      * @param categories
      * @param products
      */
-    public Associations(List<Category_> categories, List<Product> products) {
+    public Associations(List<Category_> categories, List<Product_> products) {
         this.categories = categories;
         this.products = products;
     }
@@ -51,7 +51,7 @@ public class Associations {
      * @return
      *     The products
      */
-    public List<Product> getProducts() {
+    public List<Product_> getProducts() {
         return products;
     }
 
@@ -60,7 +60,7 @@ public class Associations {
      * @param products
      *     The products
      */
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<Product_> products) {
         this.products = products;
     }
 

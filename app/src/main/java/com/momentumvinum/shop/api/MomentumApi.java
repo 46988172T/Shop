@@ -2,9 +2,13 @@ package com.momentumvinum.shop.api;
 
 import android.util.Log;
 
+import com.momentumvinum.shop.FragmentMain;
 import com.momentumvinum.shop.activities.Categories;
+import com.momentumvinum.shop.classes.busqueda.BusquedaVinos;
 import com.momentumvinum.shop.pojos.content_pojos.categories.ModelCategories;
 import com.momentumvinum.shop.pojos.content_pojos.products.ModelProducts;
+import com.momentumvinum.shop.pojos.content_pojos.products.Product;
+
 import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,26 +36,31 @@ public class MomentumApi {
         servicio = retrofit.create(MomentumInterface.class);
     }
 
+    /**
+     * Conecta a la API de MomentumVinum y 'hace una foto' de todas las categorias, creando un arraylist, que lo pasamos a classes.busqueda.BusquedaVinos.class
+     */
     public void mostrarCategorias(){
         String format = "JSON";
         String display = "full";
-        Call<ModelCategories> llamadaModelCategories = servicio.getCategories(APPID, format,display );
+        Call<ModelCategories> llamadaModelCategories = servicio.getCategories(APPID, format, display );
         llamadaModelCategories.enqueue(new Callback<ModelCategories>() {
             @Override
             public void onResponse(Call<ModelCategories> call, Response<ModelCategories> response) {
                 ModelCategories categories = response.body();
-                Categories.listaCategories = (ArrayList)categories.getCategories();
-                Log.e("CORRECTO --->", "HAY CONEXIÓN");
-                Log.e("Prueba --->", String.valueOf(response.body().getCategories().get(2).getId()));
+                BusquedaVinos.responseCategorias = (ArrayList)categories.getCategories();
+                FragmentMain.connOkCats();
             }
 
             @Override
             public void onFailure(Call<ModelCategories> call, Throwable t) {
-                Log.e("NO CORRECTO --->", "NO HAY CONEXIÓN");
+                FragmentMain.connFailCats();
             }
         });
     }
 
+    /**
+     * Conecta a la API de MomentumVinum y 'hace una foto' de todos los productos, creando un arraylist, que lo pasamos a classes.busqueda.BusquedaVinos.class
+     */
     public void mostrarProductos(){
         String format = "JSON";
         String display = "full";
@@ -60,13 +69,13 @@ public class MomentumApi {
             @Override
             public void onResponse(Call<ModelProducts> call, Response<ModelProducts> response) {
                 ModelProducts products = response.body();
-                Log.e("CORRECTO --->", "HAY CONEXIÓN");
-                Log.e("Prueba --->", String.valueOf(response.body().getProducts().get(10).getId()));
+                BusquedaVinos.responseProductos = (ArrayList) products.getProducts();
+                FragmentMain.connOkProds();
             }
 
             @Override
             public void onFailure(Call<ModelProducts> call, Throwable t) {
-                Log.e("NO CORRECTO --->", "NO HAY CONEXIÓN");
+                FragmentMain.connFailProds();
             }
         });
     }

@@ -4,7 +4,7 @@ package com.momentumvinum.shop.pojos.content_pojos.categories;
 import javax.annotation.Generated;
 
 @Generated("org.jsonschema2pojo")
-public class Product {
+public class Product_ {
 
     private String id;
 
@@ -12,14 +12,14 @@ public class Product {
      * No args constructor for use in serialization
      * 
      */
-    public Product() {
+    public Product_() {
     }
 
     /**
      * 
      * @param id
      */
-    public Product(String id) {
+    public Product_(String id) {
         this.id = id;
     }
 
