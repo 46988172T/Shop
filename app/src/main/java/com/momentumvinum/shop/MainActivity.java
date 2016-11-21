@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import com.momentumvinum.shop.classes.FontsOverride;
+import com.momentumvinum.shop.destilados_activities.DestiladosActivity;
 import com.momentumvinum.shop.vinos_activities.VinosActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -101,10 +102,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.vinos) {
-            Intent categoriesIntent = new Intent(this, VinosActivity.class);
-            startActivity(categoriesIntent);
+            Intent vinosIntent = new Intent(this, VinosActivity.class);
+            startActivity(vinosIntent);
         } else if (id == R.id.destilados) {
-
+            Intent destiladosIntent = new Intent(this, DestiladosActivity.class);
+            startActivity(destiladosIntent);
         } else if (id == R.id.otros) {
 
         } else if (id == R.id.promociones) {
