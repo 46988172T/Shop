@@ -28,6 +28,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.momentumvinum.shop.MainActivity" />
         </activity>
+        <activity android:name=".destilados_activities.DestiladosActivity"></activity>
     </application>
 
 </manifest>
