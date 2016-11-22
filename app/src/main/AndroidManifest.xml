@@ -28,7 +28,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.momentumvinum.shop.MainActivity" />
         </activity>
-        <activity android:name=".destilados_activities.DestiladosActivity"></activity>
+        <activity
+            android:name=".destilados_activities.DestiladosActivity"
+            android:label="Destilados"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.momentumvinum.shop.MainActivity" />
+        </activity>
+        <activity
+            android:name=".otros_activities.OtrosActivity"
+            android:label="Otros productos"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.momentumvinum.shop.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
