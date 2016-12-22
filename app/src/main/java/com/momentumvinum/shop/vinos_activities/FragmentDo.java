@@ -1,17 +1,22 @@
 package com.momentumvinum.shop.vinos_activities;
 
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.momentumvinum.shop.R;
-import com.momentumvinum.shop.adapters.ProductosAdapter;
+import com.momentumvinum.shop.adapters.ProductsAdapterRecycler;
+import com.momentumvinum.shop.classes.GridSpacingItemDecoration;
 import com.momentumvinum.shop.classes.busqueda.BusquedaVinos;
 import com.momentumvinum.shop.pojos.content_pojos.products.Product;
 
@@ -48,8 +53,8 @@ public class FragmentDo extends Fragment {
     public static ArrayList<Product> productos = new ArrayList<>();
     int idCatSegunPosicion;
 
-    GridView gridProducts;
-    ProductosAdapter productosAdapterDO;
+    RecyclerView gridProducts;
+    ProductsAdapterRecycler productosAdapterDO;
 
     public FragmentDo() {
         // Required empty public constructor
@@ -60,12 +65,16 @@ public class FragmentDo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_do, container, false);
-        gridProducts = (GridView)v.findViewById(R.id.gridProductsDo);
+        gridProducts = (RecyclerView) v.findViewById(R.id.recycler_view);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
+        gridProducts.setLayoutManager(mLayoutManager);
+        gridProducts.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+        gridProducts.setItemAnimator(new DefaultItemAnimator());
 
         idCatSegunPosicion = 1088;
         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-        ProductosAdapter.productosInsert.clear();
-        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+        ProductsAdapterRecycler.productosInsert.clear();
+        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
         gridProducts.setAdapter(productosAdapterDO);
 
         MaterialSpinner spinner = (MaterialSpinner) v.findViewById(R.id.spinner);
@@ -84,8 +93,8 @@ public class FragmentDo extends Fragment {
                     case 0:
                         idCatSegunPosicion = 1088;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría TODAS LAS DO tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -93,8 +102,8 @@ public class FragmentDo extends Fragment {
                     case 1:
                         idCatSegunPosicion = 1019;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría binissalem tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -102,16 +111,16 @@ public class FragmentDo extends Fragment {
                     case 2:
                         idCatSegunPosicion = 1021;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
                         Snackbar.make(view, "La categoría calatayud tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
                         return;
                     case 3:
                         idCatSegunPosicion = 1022;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría campoDeBorja tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -119,8 +128,8 @@ public class FragmentDo extends Fragment {
                     case 4:
                         idCatSegunPosicion = 1024;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría cariñena tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -128,8 +137,8 @@ public class FragmentDo extends Fragment {
                     case 5:
                         idCatSegunPosicion = 1025;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría catalunya tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -137,8 +146,8 @@ public class FragmentDo extends Fragment {
                     case 6:
                         idCatSegunPosicion = 1026;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría cava tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -146,8 +155,8 @@ public class FragmentDo extends Fragment {
                     case 7:
                         idCatSegunPosicion = 1033;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría costersSegre tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -155,8 +164,8 @@ public class FragmentDo extends Fragment {
                     case 8:
                         idCatSegunPosicion = 1035;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría emporda tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -164,8 +173,8 @@ public class FragmentDo extends Fragment {
                     case 9:
                         idCatSegunPosicion = 1044;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría manchuela tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -173,8 +182,8 @@ public class FragmentDo extends Fragment {
                     case 10:
                         idCatSegunPosicion = 1048;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría monterrei tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -182,8 +191,8 @@ public class FragmentDo extends Fragment {
                     case 11:
                         idCatSegunPosicion = 1050;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría montsant tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -191,8 +200,8 @@ public class FragmentDo extends Fragment {
                     case 12:
                         idCatSegunPosicion = 1051;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría navarra tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -200,8 +209,8 @@ public class FragmentDo extends Fragment {
                     case 13:
                         idCatSegunPosicion = 1109;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría pagoOtazu tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -209,8 +218,8 @@ public class FragmentDo extends Fragment {
                     case 14:
                         idCatSegunPosicion = 1052;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría penedes tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -218,8 +227,8 @@ public class FragmentDo extends Fragment {
                     case 15:
                         idCatSegunPosicion = 1055;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría priorat tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -227,8 +236,8 @@ public class FragmentDo extends Fragment {
                     case 16:
                         idCatSegunPosicion = 1056;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría riasBaixas tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -236,8 +245,8 @@ public class FragmentDo extends Fragment {
                     case 17:
                         idCatSegunPosicion = 1057;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría ribeiraSacra tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -245,8 +254,8 @@ public class FragmentDo extends Fragment {
                     case 18:
                         idCatSegunPosicion = 1059;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría riberaDuero tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -254,8 +263,8 @@ public class FragmentDo extends Fragment {
                     case 19:
                         idCatSegunPosicion = 1062;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría rioja tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -263,8 +272,8 @@ public class FragmentDo extends Fragment {
                     case 20:
                         idCatSegunPosicion = 1063;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría rueda tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -272,8 +281,8 @@ public class FragmentDo extends Fragment {
                     case 21:
                         idCatSegunPosicion = 1065;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría somontano tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -281,8 +290,8 @@ public class FragmentDo extends Fragment {
                     case 22:
                         idCatSegunPosicion = 1068;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría terraAlta tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -290,8 +299,8 @@ public class FragmentDo extends Fragment {
                     case 23:
                         idCatSegunPosicion = 1076;
                         productos = BusquedaVinos.busquedaProductos(String.valueOf(idCatSegunPosicion));
-                        ProductosAdapter.productosInsert.clear();
-                        productosAdapterDO = new ProductosAdapter(getContext(), productos);
+                        ProductsAdapterRecycler.productosInsert.clear();
+                        productosAdapterDO = new ProductsAdapterRecycler(getContext(), productos);
                         gridProducts.setAdapter(productosAdapterDO);
 
                         Snackbar.make(view, "La categoría valencia tiene " + productos.size() +" productos", Snackbar.LENGTH_LONG).show();
@@ -302,4 +311,8 @@ public class FragmentDo extends Fragment {
         return v;
     }
 
+    private int dpToPx(int dp) {
+        Resources r = getResources();
+        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
 }

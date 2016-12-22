@@ -24,6 +24,7 @@ public class DestiladosActivity extends AppCompatActivity {
         final ViewPagerAdapterDestilados viewPagerAdapterDestilados = new ViewPagerAdapterDestilados(getSupportFragmentManager(),tab_layout.getTabCount());
         viewPager.setAdapter(viewPagerAdapterDestilados);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_layout));
+        //tab_layout.getTabAt(0).setIcon(R.drawable.ic_euro_symbol);
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

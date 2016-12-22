@@ -13,4 +13,7 @@
     <string name="title_activity_vinos">VinosActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="deseado">Añadir a lista de deseados</string>
+    <string name="carrito">Añadir a carrito de la compra</string>
 </resources>

@@ -11,12 +11,12 @@
         android:layout_height="wrap_content"
         android:textColor="@color/textColorPrimary"/>
 
-    <GridView
-        android:id="@+id/gridProductsPrecio"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="461dp"
-        android:layout_below="@+id/spinner"
-        android:numColumns="auto_fit"
-        android:padding="2dp"/>
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
 
 </RelativeLayout>

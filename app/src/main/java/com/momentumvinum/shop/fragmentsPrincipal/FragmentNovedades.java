@@ -27,7 +27,7 @@ public class FragmentNovedades extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_novedades, container, false);
-        Button buttonApi;
+        Button buttonApi, buttonApi2;
         buttonApi = (Button)v.findViewById(R.id.buttonApi);
         buttonApi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,9 +35,19 @@ public class FragmentNovedades extends Fragment {
                 //activamos la api
                 MomentumApi momentumApi = new MomentumApi();
                 momentumApi.mostrarCategorias();
+
+            }
+        });
+        buttonApi2 = (Button)v.findViewById(R.id.buttonApi2);
+        buttonApi2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //activamos la api
+                MomentumApi momentumApi = new MomentumApi();
                 momentumApi.mostrarProductos();
             }
         });
+
         return v;
     }
 
